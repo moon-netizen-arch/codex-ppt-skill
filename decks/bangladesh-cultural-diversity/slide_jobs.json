@@ -454,7 +454,7 @@
         }
       ],
       "requires_context_images": true,
-      "status": "dispatched",
+      "status": "recorded",
       "dispatch": {
         "agent_id": "main-agent",
         "agent_nickname": "main sequential worker",
@@ -462,7 +462,22 @@
         "prompt_sha256": "7dc41b23cd5a6fb8da1d661460051d9e0a1eb795ea193773cae4acf6f73d8baa",
         "dispatched_at": "2026-11-04T10:19:00Z"
       },
-      "result": null,
+      "result": {
+        "agent_id": "main-agent",
+        "backend_used": "built-in image tool",
+        "selected_source": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_10.png",
+        "selected_source_sha256": "dc3af140f229c2e76dab9a97afdf3c31419295734e376bf468b484cda7c551d8",
+        "final_image": "origin_image/slide_10.png",
+        "final_image_sha256": "dc3af140f229c2e76dab9a97afdf3c31419295734e376bf468b484cda7c551d8",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "QA pass: text exact and fits; strict photo preserved; badge/style consistent.",
+        "recorded_at": "2026-11-04T10:30:41Z"
+      },
       "blocker": null
     },
     {
@@ -484,7 +499,7 @@
         }
       ],
       "requires_context_images": true,
-      "status": "dispatched",
+      "status": "recorded",
       "dispatch": {
         "agent_id": "main-agent",
         "agent_nickname": "main sequential worker",
@@ -492,7 +507,22 @@
         "prompt_sha256": "a280c827c857b564f528f79fa2ae961f388e040cbf554b64693b280b306e82df",
         "dispatched_at": "2026-11-04T10:19:00Z"
       },
-      "result": null,
+      "result": {
+        "agent_id": "main-agent",
+        "backend_used": "built-in image tool",
+        "selected_source": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_11.png",
+        "selected_source_sha256": "c6798137405b042975ba855d85783eebe537b4366582a874fa7fd322f70fc484",
+        "final_image": "origin_image/slide_11.png",
+        "final_image_sha256": "c6798137405b042975ba855d85783eebe537b4366582a874fa7fd322f70fc484",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "QA pass: text exact and fits; strict photo preserved; badge/style consistent.",
+        "recorded_at": "2026-11-04T10:30:41Z"
+      },
       "blocker": null
     },
     {
@@ -514,7 +544,7 @@
         }
       ],
       "requires_context_images": true,
-      "status": "dispatched",
+      "status": "recorded",
       "dispatch": {
         "agent_id": "main-agent",
         "agent_nickname": "main sequential worker",
@@ -522,7 +552,22 @@
         "prompt_sha256": "408d8c425acde70c217c9e4f5242e16513cd32299ac2110e4683cfcec0b0582e",
         "dispatched_at": "2026-11-04T10:19:00Z"
       },
-      "result": null,
+      "result": {
+        "agent_id": "main-agent",
+        "backend_used": "built-in image tool",
+        "selected_source": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_12.png",
+        "selected_source_sha256": "9f5eecfab7654dfd177ffb9d5a06e660a5c1311f1e3915a0422b2a4ae969efd9",
+        "final_image": "origin_image/slide_12.png",
+        "final_image_sha256": "9f5eecfab7654dfd177ffb9d5a06e660a5c1311f1e3915a0422b2a4ae969efd9",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "QA pass: text exact and fits; strict photo preserved; badge/style consistent.",
+        "recorded_at": "2026-11-04T10:30:41Z"
+      },
       "blocker": null
     },
     {
@@ -539,7 +584,7 @@
         }
       ],
       "requires_context_images": true,
-      "status": "dispatched",
+      "status": "recorded",
       "dispatch": {
         "agent_id": "main-agent",
         "agent_nickname": "main sequential worker",
@@ -547,7 +592,22 @@
         "prompt_sha256": "b3df4258dcb220c7311a8ee4da01c2a1240a57c48dc6809a1cb578a96e1055f0",
         "dispatched_at": "2026-11-04T10:19:00Z"
       },
-      "result": null,
+      "result": {
+        "agent_id": "main-agent",
+        "backend_used": "built-in image tool",
+        "selected_source": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_13.png",
+        "selected_source_sha256": "a221ac844b4e019d73c02b457a720839238e6e706b0e9c4ddefc1c6551cf8372",
+        "final_image": "origin_image/slide_13.png",
+        "final_image_sha256": "a221ac844b4e019d73c02b457a720839238e6e706b0e9c4ddefc1c6551cf8372",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "QA pass: text exact and fits; strict photo preserved; badge/style consistent.",
+        "recorded_at": "2026-11-04T10:30:42Z"
+      },
       "blocker": null
     },
     {
@@ -574,7 +634,7 @@
         }
       ],
       "requires_context_images": true,
-      "status": "dispatched",
+      "status": "recorded",
       "dispatch": {
         "agent_id": "main-agent",
         "agent_nickname": "main sequential worker",
@@ -582,7 +642,22 @@
         "prompt_sha256": "4574412c0538f19853693c7f04660ef71a9090be76e0d67a6fd64f352892d7bf",
         "dispatched_at": "2026-11-04T10:19:00Z"
       },
-      "result": null,
+      "result": {
+        "agent_id": "main-agent",
+        "backend_used": "built-in image tool",
+        "selected_source": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_14.png",
+        "selected_source_sha256": "9d31de907713e4af009abaab338b944d2e73dac8f3d8f9b909bce330c5550e14",
+        "final_image": "origin_image/slide_14.png",
+        "final_image_sha256": "9d31de907713e4af009abaab338b944d2e73dac8f3d8f9b909bce330c5550e14",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "QA pass: text exact and fits; strict photo(s) preserved; badge/style consistent.",
+        "recorded_at": "2026-11-04T10:32:29Z"
+      },
       "blocker": null
     },
     {
@@ -624,7 +699,7 @@
         }
       ],
       "requires_context_images": true,
-      "status": "dispatched",
+      "status": "recorded",
       "dispatch": {
         "agent_id": "main-agent",
         "agent_nickname": "main sequential worker",
@@ -632,7 +707,22 @@
         "prompt_sha256": "69719c3bf2963d41120eb52c4e8374fbeed8ef82aead8b53f71dc4e349a09099",
         "dispatched_at": "2026-11-04T10:19:00Z"
       },
-      "result": null,
+      "result": {
+        "agent_id": "main-agent",
+        "backend_used": "built-in image tool",
+        "selected_source": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_16.png",
+        "selected_source_sha256": "c2fcd6602902a0a69105513feb954d7ccf6b1fd929ba34d0d3c7e3957ff91600",
+        "final_image": "origin_image/slide_16.png",
+        "final_image_sha256": "c2fcd6602902a0a69105513feb954d7ccf6b1fd929ba34d0d3c7e3957ff91600",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "QA pass: text exact and fits; strict photo(s) preserved; badge/style consistent.",
+        "recorded_at": "2026-11-04T10:32:29Z"
+      },
       "blocker": null
     },
     {
@@ -649,7 +739,7 @@
         }
       ],
       "requires_context_images": true,
-      "status": "dispatched",
+      "status": "recorded",
       "dispatch": {
         "agent_id": "main-agent",
         "agent_nickname": "main sequential worker",
@@ -657,9 +747,24 @@
         "prompt_sha256": "7663505d3920724d1c7eaa664eb04fc39c3b616f47ab7de740476e8d7adc1617",
         "dispatched_at": "2026-11-04T10:19:00Z"
       },
-      "result": null,
+      "result": {
+        "agent_id": "main-agent",
+        "backend_used": "built-in image tool",
+        "selected_source": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_17.png",
+        "selected_source_sha256": "cd17942dfcf38b49e631dbaf13bfc3b5d5ca8a51ff68e02216256327160f3208",
+        "final_image": "origin_image/slide_17.png",
+        "final_image_sha256": "cd17942dfcf38b49e631dbaf13bfc3b5d5ca8a51ff68e02216256327160f3208",
+        "expected_backend": "built-in image tool",
+        "expected_backend_labels": [
+          "built-in image tool",
+          "image_gen"
+        ],
+        "sample_generation_method_matched": true,
+        "qa_note": "QA pass: text exact and fits; strict photo(s) preserved; badge/style consistent.",
+        "recorded_at": "2026-11-04T10:32:29Z"
+      },
       "blocker": null
     }
   ],
-  "updated_at": "2026-11-04T10:24:35Z"
+  "updated_at": "2026-11-04T10:32:29Z"
 }
