@@ -144,6 +144,13 @@ def motif(slide, corner="tr", color=GREEN):
         ln.rotation = -45 if corner in ("tr", "bl") else 45
 
 
+def motif_tr_safe(slide, color=GREEN):
+    """Top-right corner motif that clears the badge (x<12.2) and headlines."""
+    for i in range(3):
+        ln = rect(slide, 10.95 + i * 0.16, 0.15 + i * 0.13, 1.05, 0.03, fill=color)
+        ln.rotation = -45
+
+
 def photo(slide, figs: Path, name, x, y, w, h, caption=None, frame=True):
     src = figs / name
     img = Image.open(src).convert("RGB")
@@ -205,118 +212,146 @@ def load_notes(deck: Path):
 
 
 # ---------- slides ----------
+def jamdani_band(slide, y=None):
+    y = (H - 0.45) if y is None else y
+    rect(slide, 0, y, W, H - y, fill=GREEN)
+    for i in range(int(W / 0.5) + 1):
+        d = rect(slide, 0.2 + i * 0.5, y + 0.12, 0.18, 0.18, fill=IVORY)
+        d.rotation = 45
+
+
 def s01(prs):
     s = prs.slides.add_slide(prs.slide_layouts[6])
-    eyebrow(s, 0.7, 0.55, "South Asia · Seminar Series")
-    txt(s, 0.7, 1.0, 11.9, 2.1,
+    eyebrow(s, 0.7, 0.5, "South Asia · Seminar Series")
+    txt(s, 0.7, 0.95, 12.3, 1.75,
         "CULTURAL DIVERSITY AND\nNATIONAL IDENTITY IN BANGLADESH",
-        size=44, color=INK, bold=True, font=HEAD_FONT, line=0.98)
-    rect(s, 0.72, 3.05, 4.6, 0.03, fill=VERM)
-    txt(s, 0.7, 3.2, 11, 0.5, "Historical and Political Perspectives", size=22, color=INK)
-    txt(s, 0.7, 3.8, 11, 0.4, "Masters Seminar Presentation", size=15, color=GREEN, bold=True, spc=80)
-    motif(s, "tr")
-    return {"strip": ("lalbagh_fort_pano.jpg", 0.0, 5.5, W, 2.0)}
+        size=40, color=INK, bold=True, font=HEAD_FONT, line=0.98)
+    txt(s, 0.7, 2.8, 11, 0.5, "Historical and Political Perspectives", size=23, color=INK)
+    rect(s, 0.72, 3.28, 4.5, 0.035, fill=VERM)
+    txt(s, 0.7, 3.48, 11, 0.4, "Masters Seminar Presentation", size=15, color=INK, spc=40)
+    motif(s, "tr", INK)
+    rect(s, 0.0, 4.47, W, 0.02, fill=INK)
+    return {"strip": ("lalbagh_fort_pano.jpg", 0.0, 4.5, W, 3.0)}
 
 
 def s02(prs):
     s = prs.slides.add_slide(prs.slide_layouts[6])
-    headline(s, "Language Movement and Ekushey February", size=27, w=11.5)
+    txt(s, 1.6, 0.5, 10.2, 1.5, "LANGUAGE MOVEMENT\nAND EKUSHEY FEBRUARY",
+        size=38, color=GREEN, bold=True, font=HEAD_FONT, align=PP_ALIGN.CENTER, line=0.98)
+    rect(s, 0.55, 2.12, W - 1.1, 0.03, fill=VERM)
+    rect(s, 0.55, 2.19, W - 1.1, 0.015, fill=VERM)
     badge(s, 2)
-    motif(s, "bl", VERM)
+    motif(s, "tl", GREEN)
     cards = [
         ("1952", "Students sacrifice their lives demanding Bangla as the state language"),
         ("1972", "Article 3: Bangla is the state language of the Republic"),
         ("1999", "UNESCO declares 21 February International Mother Language Day"),
     ]
-    y = 1.75
+    y = 2.55
     for yr, line in cards:
-        c = card(s, 6.7, y, 6.1, 1.45)
-        chip(s, 6.95, y + 0.33, 1.3, 0.8, yr, size=17)
-        txt(s, 8.45, y + 0.28, 4.15, 0.95, line, size=13, color=INK, line=1.05)
-        y += 1.7
+        card(s, 6.95, y, 5.85, 1.3, line=INK, lw=1.0)
+        yc = rect(s, 7.2, y + 0.2, 1.05, 0.9, fill=GREEN, rounded=True, radius=0.18)
+        shape_text(yc, yr, size=17, color=WHITE, bold=True, font=HEAD_FONT)
+        txt(s, 8.5, y + 0.2, 4.1, 0.95, line, size=12.5, color=INK, line=1.05,
+            anchor=MSO_ANCHOR.MIDDLE)
+        y += 1.48
     return {
-        "p1": ("shaheed_minar_monument.jpg", 0.6, 1.9, 2.8, 4.9, "Shaheed Minar"),
-        "p2": ("shaheed_minar_ekushey.webp", 3.6, 1.9, 2.8, 4.9, "Ekushey observance"),
+        "p1": ("shaheed_minar_monument.jpg", 0.7, 2.55, 2.85, 3.85, "Shaheed Minar"),
+        "p2": ("shaheed_minar_ekushey.webp", 3.85, 2.55, 2.85, 3.85, "Ekushey observance"),
     }
 
 
 def s03(prs):
     s = prs.slides.add_slide(prs.slide_layouts[6])
-    headline(s, "From Partition to Liberation, 1947–1971", size=29)
+    headline(s, "From Partition to Liberation, 1947–1971", y=0.42, size=30, w=11.18)
     badge(s, 3)
-    motif(s, "tr", GREEN)
-    # timeline band
-    band_y = 5.35
+    motif(s, "bl", GREEN)
+    band_y = 5.5
     rect(s, 0.55, band_y, 12.25, 0.85, fill=GREEN)
     nodes = [
-        (0.9, "1947 — Partition: East Bengal joins Pakistan; mass refugee flows"),
-        (5.3, "1952 — Language movement"),
-        (8.6, "1971 — Nine-month Liberation War; victory on 16 December"),
+        (0.9, 1.65, 3.3, "1947 — Partition: East Bengal joins Pakistan; mass refugee flows"),
+        (5.3, 6.05, 2.4, "1952 — Language movement"),
+        (8.6, 9.35, 3.3, "1971 — Nine-month Liberation War; victory on 16 December"),
     ]
-    for nx, t in nodes:
-        d = s.shapes.add_shape(MSO_SHAPE.OVAL, Inches(nx + 0.25), Inches(band_y - 0.16), Inches(0.34), Inches(0.34))
-        d.fill.solid(); d.fill.fore_color.rgb = VERM; d.line.fill.background(); d.shadow.inherit = False
-        txt(s, nx + 0.75, band_y + 0.14, 3.9, 0.6, t, size=11.5, color=WHITE, bold=True, line=1.0)
-    txt(s, 0.55, 6.5, 12.2, 0.4,
+    for nx, tx, tw, t in nodes:
+        d = s.shapes.add_shape(MSO_SHAPE.OVAL, Inches(nx + 0.4), Inches(band_y - 0.17),
+                               Inches(0.34), Inches(0.34))
+        d.fill.solid(); d.fill.fore_color.rgb = VERM
+        d.line.fill.background(); d.shadow.inherit = False
+        txt(s, tx, band_y + 0.15, tw, 0.62, t, size=11, color=WHITE, bold=True, line=1.0,
+            anchor=MSO_ANCHOR.MIDDLE)
+    txt(s, 5.35, band_y + 0.2, 0.5, 0.4, "→", size=16, color=WHITE, bold=True)
+    txt(s, 8.55, band_y + 0.2, 0.5, 0.4, "→", size=16, color=WHITE, bold=True)
+    txt(s, 0.55, 6.6, 12.2, 0.4,
         "Memory of 1971 anchors a civic, language-based national identity.",
         size=14, color=INK, bold=True, align=PP_ALIGN.CENTER)
     return {
-        "p1": ("partition_1947_refugees.jpg", 0.6, 1.7, 5.9, 3.3, "Partition refugees, 1947"),
-        "p2": ("libwar_refugee_sculpture.jpg", 6.9, 1.7, 5.9, 3.3, "Liberation War memorial"),
+        "p1": ("partition_1947_refugees.jpg", 0.6, 1.9, 5.9, 3.05, "Partition refugees, 1947"),
+        "p2": ("libwar_refugee_sculpture.jpg", 6.9, 1.9, 5.9, 3.05, "Liberation War memorial"),
     }
 
 
 def s04(prs):
     s = prs.slides.add_slide(prs.slide_layouts[6])
-    headline(s, "Constitution, Principles, and the Secularism Debate", size=27, w=10.6, split_at=", Principles,")
+    headline(s, "Constitution, Principles, and the Secularism Debate", y=0.42,
+             size=27, w=10.6, split_at=", Principles,")
     badge(s, 4)
-    motif(s, "bl")
+    motif_tr_safe(s, GREEN)
+    rect(s, 6.5, 1.9, 0.5, 4.65, fill=GREEN, rounded=True, radius=0.5)
     steps = [
-        ("1972", "Four principles: nationalism, socialism, democracy, secularism", GREEN),
-        ("Fifth Amendment (1977/1979)", "Secularism removed; Bismillah inserted", GREEN),
-        ("1988 · 2005", "Eighth Amendment — Islam, the state religion · High Court: removal of secularism illegal", VERM),
-        ("2011", "Fifteenth Amendment — secularism restored; Article 12 anti-communalism; Article 2A keeps Islam as state religion", VERM),
+        ("1972", GREEN, "1972", "Four principles: nationalism, socialism, democracy, secularism", 1.95),
+        (None, GREEN_DK, "Fifth Amendment (1977/1979)", "Secularism removed; Bismillah inserted", 3.15),
+        ("1988", VERM, "Eighth Amendment — Islam, the state religion",
+         "2005 High Court: removal of secularism illegal", 4.35),
+        ("2011", VERM, "Fifteenth Amendment — secularism restored",
+         "Article 12 anti-communalism; Article 2A keeps Islam as state religion", 5.55),
     ]
-    x0, y = 6.5, 1.7
-    rect(s, x0, y + 0.1, 0.05, 5.0, fill=GREEN)  # spine
-    for head, body, c in steps:
-        d = s.shapes.add_shape(MSO_SHAPE.OVAL, Inches(x0 - 0.11), Inches(y + 0.12), Inches(0.28), Inches(0.28))
-        d.fill.solid(); d.fill.fore_color.rgb = c; d.line.fill.background(); d.shadow.inherit = False
-        txt(s, x0 + 0.4, y, 6.3, 0.35, head, size=13, color=c, bold=True, font=HEAD_FONT, caps=True)
-        txt(s, x0 + 0.4, y + 0.33, 6.3, 0.85, body, size=12, color=INK, line=1.0)
-        y += 1.3
-    # article chips
-    cx = 0.6
-    for t in ["Art. 8", "2A", "12", "41"]:
-        chip(s, cx, 6.55, 1.0, 0.4, t, fill=GREEN, size=11)
-        cx += 1.15
-    return {"p1": ("martyrs_memorial_savar.jpg", 0.6, 1.7, 5.3, 4.5, "National Martyrs’ Memorial, Savar")}
+    for pill_year, pill_color, head, body, y in steps:
+        if pill_year:
+            pill = rect(s, 6.48, y, 0.54, 0.95, fill=pill_color, rounded=True, radius=0.4)
+            tb = txt(s, 6.48 - 0.33, y + 0.3, 1.2, 0.35, pill_year, size=11.5, color=WHITE,
+                     bold=True, font=HEAD_FONT, align=PP_ALIGN.CENTER)
+            tb.rotation = 270
+        else:
+            d = s.shapes.add_shape(MSO_SHAPE.OVAL, Inches(6.62), Inches(y + 0.32),
+                                   Inches(0.26), Inches(0.26))
+            d.fill.solid(); d.fill.fore_color.rgb = VERM
+            d.line.color.rgb = IVORY; d.line.width = Pt(1.5); d.shadow.inherit = False
+        txt(s, 7.25, y, 5.55, 0.4, head, size=12.5, color=pill_color, bold=True,
+            font=HEAD_FONT, caps=True, line=1.0)
+        txt(s, 7.25, y + 0.42, 5.55, 0.75, body, size=11.5, color=INK, line=1.0)
+    chip(s, 6.5, 6.75, 3.1, 0.42, "Art. 8 · 2A · 12 · 41", fill=GREEN, size=11.5)
+    return {"p1": ("martyrs_memorial_savar.jpg", 0.7, 1.9, 5.1, 4.55,
+                   "National Martyrs’ Memorial, Savar")}
 
 
 def s05(prs):
     s = prs.slides.add_slide(prs.slide_layouts[6])
     eyebrow(s, 0.7, 0.5, "Faith · Majority Tradition")
-    headline(s, "The Islamic Heritage of Bengal", y=0.9, size=30, w=6.3, x=0.7, split_at=" Heritage")
+    headline(s, "The Islamic Heritage of Bengal", y=0.9, size=28, w=6.1, x=0.7,
+             split_at=" Heritage")
     badge(s, 5)
-    txt(s, 0.7, 2.4, 6.0, 1.3, "91.04%", size=72, color=VERM, bold=True, font=HEAD_FONT)
-    txt(s, 0.7, 3.75, 6.0, 0.4, "Muslims of 169.8M — Census 2022", size=16, color=INK, bold=True)
+    txt(s, 0.7, 2.55, 6.0, 1.25, "91.04%", size=70, color=VERM, bold=True, font=HEAD_FONT)
+    txt(s, 0.7, 3.85, 6.0, 0.4, "Muslims of 169.8M — Census 2022", size=16, color=INK, bold=True)
     notes = [
         "Baitul Mukarram: the national mosque, Dhaka",
         "Sufi shrines (mazars) knit local devotion across faiths",
         "Baul–Sufi synthesis — UNESCO Intangible Heritage, 2005",
     ]
-    y = 4.45
+    y = 4.5
     for n in notes:
-        rect(s, 0.72, y + 0.1, 0.16, 0.16, fill=GREEN)
-        txt(s, 1.0, y, 5.7, 0.5, n, size=13, color=INK, line=1.0)
-        y += 0.72
-    motif(s, "bl")
-    return {"p1": ("mosque_baitul_mukarram.jpg", 7.1, 0.75, 5.7, 6.3, "Baitul Mukarram, Dhaka")}
+        rect(s, 0.72, y + 0.09, 0.15, 0.15, fill=GREEN)
+        txt(s, 1.0, y, 5.6, 0.5, n, size=13, color=INK, line=1.0)
+        y += 0.7
+    jamdani_band(s, H - 0.45)
+    return {"p1": ("mosque_baitul_mukarram.jpg", 7.15, 0.7, 5.6, 5.85,
+                   "Baitul Mukarram, Dhaka")}
 
 
 def s06(prs):
     s = prs.slides.add_slide(prs.slide_layouts[6])
-    headline(s, "Four Threads of Identity", y=0.5, size=36)
+    motif_tr_safe(s, GREEN)
+    headline(s, "Four Threads of Identity", y=0.45, size=40, w=11.18)
     badge(s, 6)
     items = [
         ("I", "LANGUAGE", "Bangla state language + 50+ tongues of the peoples"),
@@ -327,24 +362,25 @@ def s06(prs):
     x = 0.55
     for num, ttl, body in items:
         card(s, x, 2.0, 3.0, 4.1, line=INK, lw=1.25)
-        txt(s, x, 2.35, 3.0, 0.9, num, size=44, color=GREEN, bold=True, font=HEAD_FONT, align=PP_ALIGN.CENTER)
+        txt(s, x, 2.35, 3.0, 0.9, num, size=44, color=GREEN, bold=True, font=HEAD_FONT,
+            align=PP_ALIGN.CENTER)
         rect(s, x + 0.5, 3.35, 2.0, 0.02, fill=INK)
-        txt(s, x + 0.15, 3.55, 2.7, 0.55, ttl, size=20, color=INK, bold=True, font=HEAD_FONT, align=PP_ALIGN.CENTER)
-        txt(s, x + 0.25, 4.3, 2.5, 1.6, body, size=13, color=INK, align=PP_ALIGN.CENTER, line=1.1)
+        txt(s, x + 0.15, 3.55, 2.7, 0.55, ttl, size=20, color=INK, bold=True, font=HEAD_FONT,
+            align=PP_ALIGN.CENTER)
+        txt(s, x + 0.25, 4.3, 2.5, 1.6, body, size=13, color=INK, align=PP_ALIGN.CENTER,
+            line=1.1)
         x += 3.16
-    # jamdani band
-    rect(s, 0, H - 0.45, W, 0.45, fill=GREEN)
-    for i in range(26):
-        d = rect(s, 0.25 + i * 0.5, H - 0.32, 0.18, 0.18, fill=IVORY)
-        d.rotation = 45
+    jamdani_band(s, H - 0.45)
     return {}
 
 
 def s07(prs):
     s = prs.slides.add_slide(prs.slide_layouts[6])
-    headline(s, "Who Is Indigenous? Counting and Naming the Peoples", size=25, w=8.4, split_at=" Counting")
+    motif_tr_safe(s, GREEN)
+    headline(s, "Who Is Indigenous? Counting and Naming the Peoples", y=0.42,
+             size=25, w=8.4, split_at=" Counting")
     badge(s, 7)
-    txt(s, 0.6, 1.72, 8.2, 0.35,
+    txt(s, 0.6, 1.78, 8.2, 0.35,
         "Census 2022 counts 1,650,159 indigenous persons across 50 groups",
         size=13.5, color=INK, bold=True)
     bars = [
@@ -352,43 +388,52 @@ def s07(prs):
         ("TRIPURI", "156,578", 0.32), ("SANTAL", "129,049", 0.265),
         ("ORAON", "85,846", 0.177), ("GARO", "76,846", 0.158),
     ]
-    y = 2.25
-    maxw = 4.9
+    y = 2.3
+    maxw = 4.7
     for name, fig, frac in bars:
-        rect(s, 0.6, y, max(maxw * frac, 1.35), 0.44, fill=GREEN, rounded=True, radius=0.5)
-        txt(s, 0.78, y + 0.07, 1.6, 0.3, name, size=12, color=WHITE, bold=True, spc=60)
-        txt(s, 0.6 + max(maxw * frac, 1.35) + 0.15, y + 0.06, 1.5, 0.3, fig, size=13, color=INK, bold=True)
-        y += 0.56
-    # caveat
-    rect(s, 0.6, 5.75, 8.3, 1.4, fill=None, line=VERM, lw=1.75, rounded=True, radius=0.05)
-    tab = rect(s, 0.75, 5.6, 1.3, 0.4, fill=VERM, rounded=True, radius=0.3)
+        bw = max(maxw * frac, 1.35)
+        rect(s, 0.6, y, bw, 0.42, fill=GREEN, rounded=True, radius=0.5)
+        txt(s, 0.78, y + 0.06, 1.6, 0.3, name, size=12, color=WHITE, bold=True, spc=60)
+        txt(s, 0.6 + bw + 0.15, y + 0.05, 1.5, 0.3, fig, size=13, color=INK, bold=True)
+        y += 0.54
+    rect(s, 0.6, 5.9, 7.9, 1.35, fill=None, line=VERM, lw=1.75, rounded=True, radius=0.05)
+    tab = rect(s, 0.75, 5.75, 1.3, 0.4, fill=VERM, rounded=True, radius=0.3)
     shape_text(tab, "CAVEAT", size=12, color=WHITE, bold=True, spc=80)
-    txt(s, 0.8, 6.1, 7.9, 1.0,
+    txt(s, 0.8, 6.25, 7.5, 0.95,
         "Definitions are contested: the government says “ethnic minority”; the UN and most "
         "movements say “indigenous”. Activist estimates exceed 3 million; the census count is far lower.",
-        size=12.5, color=INK, line=1.05)
-    return {"p1": ("indigenous_family_ch.jpg", 9.4, 1.75, 3.3, 3.9, "Chakma girls in traditional dress")}
+        size=12, color=INK, line=1.05)
+    return {"p1": ("indigenous_family_ch.jpg", 9.0, 1.78, 3.7, 4.1,
+                   "Chakma girls in traditional dress")}
 
 
 def s08(prs):
     s = prs.slides.add_slide(prs.slide_layouts[6])
-    headline(s, "Temples, Viharas, and Churches", size=30, w=10)
+    txt(s, 0.6, 0.45, W - 1.2, 0.8, "TEMPLES, VIHARAS, AND CHURCHES", size=40, color=INK,
+        bold=True, font=HEAD_FONT, align=PP_ALIGN.CENTER, caps=True)
+    rules(s, 1.6, 1.3, W - 3.2)
+    txt(s, 0.6, 1.5, W - 1.2, 0.35, "Three living traditions, one constitutional promise",
+        size=15, color=INK, align=PP_ALIGN.CENTER)
     badge(s, 8)
-    txt(s, 0.6, 1.68, 12, 0.3, "Three living traditions, one constitutional promise", size=14, color=INK)
     items = [
         ("temple_dhakeshwari.webp", "Dhakeshwari Temple", "The state temple of Dhaka"),
-        ("church_holy_cross.jpg", "Holy Cross Church", "Christianity since the Portuguese era; Holy Cross educational tradition"),
+        ("church_holy_cross.jpg", "Holy Cross Church",
+         "Christianity since the Portuguese era; Holy Cross educational tradition"),
         ("buddhist_golden_temple.webp", "Buddha Dhatu Jadi", "Bandarban’s golden temple"),
     ]
     x = 0.75
     for fn, cap, line in items:
-        photo(s, FIGS, fn, x, 2.2, 3.6, 2.6)
-        txt(s, x, 5.0, 3.6, 0.35, cap, size=15, color=INK, bold=True, font=HEAD_FONT, align=PP_ALIGN.CENTER, caps=True)
-        txt(s, x + 0.1, 5.4, 3.4, 0.9, line, size=11.5, color=INK, align=PP_ALIGN.CENTER, line=1.05)
+        photo(s, FIGS, fn, x, 2.1, 3.6, 2.6)
+        card(s, x, 4.95, 3.6, 1.35, line=INK, lw=1.0)
+        txt(s, x + 0.1, 5.08, 3.4, 0.35, cap, size=15, color=INK, bold=True, font=HEAD_FONT,
+            align=PP_ALIGN.CENTER, caps=True)
+        rect(s, x + 0.7, 5.48, 2.2, 0.02, fill=INK)
+        txt(s, x + 0.2, 5.58, 3.2, 0.68, line, size=11, color=INK, align=PP_ALIGN.CENTER,
+            line=1.0)
         x += 4.05
     rect(s, 0.55, 6.55, 12.25, 0.55, fill=GREEN)
-    chip(s, 0.75, 6.63, 1.1, 0.4, "Art. 41", fill=VERM, size=11)
-    txt(s, 2.1, 6.65, 10.5, 0.35, "freedom to profess, practice, and propagate religion",
+    chip(s, 0.75, 6.63, 1.15, 0.4, "Art. 41", fill=VERM, size=11)
+    txt(s, 2.15, 6.65, 10.5, 0.35, "freedom to profess, practice, and propagate religion",
         size=13.5, color=WHITE, bold=True)
     return {}
 
@@ -499,7 +544,7 @@ def s10(prs):
     txt(s, 0.6, 6.55, 12, 0.6,
         "Wangala — the Garo harvest festival of thanks · Weaving, drum, and dance traditions carried across generations",
         size=13, color=INK)
-    motif(s, "tr", VERM)
+    motif_tr_safe(s, VERM)
     return {}
 
 
@@ -528,7 +573,7 @@ def s11(prs):
     txt(s, 6.55, 6.15, 6.05, 0.7,
         "Conflict toll ~8,140 killed, injured, or missing (Dey 2024) · Kroc peace-score 49/100",
         size=13, color=INK, bold=True, line=1.0)
-    motif(s, "bl")
+    motif_tr_safe(s, GREEN)
     return {"p1": ("cht_rangamati_lake.jpg", 0.6, 1.8, 5.3, 4.9, "Kaptai Lake, Rangamati")}
 
 
@@ -553,7 +598,7 @@ def s12(prs):
         "2017 mass flight → 2024 new arrivals → 2025 deadliest sea year (~900 dead or missing) → "
         "2025 UNGA High-Level Conference (30 Sep)",
         size=12, color=WHITE, bold=True, align=PP_ALIGN.CENTER)
-    motif(s, "tr", GREEN)
+    motif_tr_safe(s, GREEN)
     return {"p1": ("rohingya_camp_aerial.jpg", 6.5, 1.75, 6.3, 4.4, "Kutupalong camp, Cox’s Bazar")}
 
 
@@ -576,7 +621,7 @@ def s13(prs):
     rect(s, 0.0, H - 0.7, W, 0.7, fill=VERM)
     txt(s, 0.4, H - 0.56, 12.6, 0.45, "BELONGING, EARNED LATE", size=20, color=WHITE, bold=True,
         font=HEAD_FONT, align=PP_ALIGN.CENTER, spc=200)
-    motif(s, "tr")
+    motif_tr_safe(s, GREEN)
     return {}
 
 
@@ -603,7 +648,7 @@ def s14(prs):
     chip(s, 4.5, y, 5.6, 0.48, "DURGA PUJA — NATIONAL HOLIDAY", fill=VERM, size=12.5)
     txt(s, 4.5, y + 0.6, 8.2, 0.4, "Festivals are civic spaces where pluralism becomes national.",
         size=13, color=INK, bold=True)
-    motif(s, "tr", VERM)
+    motif_tr_safe(s, VERM)
     return {}
 
 
@@ -639,13 +684,13 @@ def s15(prs):
     for i in range(26):
         d = rect(s, 0.25 + i * 0.5, H - 0.3, 0.14, 0.14, fill=IVORY)
         d.rotation = 45
-    motif(s, "tr", GREEN)
+    motif_tr_safe(s, GREEN)
     return {}
 
 
 def s16(prs):
     s = prs.slides.add_slide(prs.slide_layouts[6])
-    headline(s, "Conclusion: Identity as Negotiation", y=0.5, size=32, w=11.4)
+    headline(s, "Conclusion: Identity as Negotiation", y=0.5, size=30, w=11.18)
     badge(s, 16)
     rows = [
         ("UNITY", "language and the memory of 1971 hold the nation together"),
@@ -669,8 +714,7 @@ def s16(prs):
     rect(s, 0.7, 6.7, 12.0, 0.02, fill=GREEN)
     txt(s, 0.7, 6.85, 12, 0.3, "Cultural Diversity and National Identity in Bangladesh · Seminar",
         size=11, color=GREEN, bold=True, spc=200, caps=True, align=PP_ALIGN.CENTER)
-    motif(s, "tr")
-    motif(s, "bl")
+    motif_tr_safe(s, GREEN)
     return {}
 
 
@@ -694,7 +738,7 @@ def s17(prs):
     txt(s, 0.6, 6.55, 12.1, 0.35,
         "Cultural Diversity and National Identity in Bangladesh · Masters Seminar",
         size=12, color=INK, align=PP_ALIGN.CENTER, spc=60)
-    motif(s, "bl", VERM)
+    motif_tr_safe(s, GREEN)
     return {}
 
 
