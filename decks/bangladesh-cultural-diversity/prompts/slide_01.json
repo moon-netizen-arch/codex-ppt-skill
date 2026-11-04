@@ -1,0 +1,47 @@
+{
+  "slide": 1,
+  "title": "Cultural Diversity and National Identity in Bangladesh",
+  "prompt": "# Codex PPT Slide Image Prompt\n\n## Canvas\n{\n  \"type\": \"16:9 full-slide PowerPoint image\",\n  \"language\": \"English\",\n  \"slide_number\": 1,\n  \"render_slide_number\": false\n}\n\n## Deck Goal\nA masters-level seminar deck on how cultural diversity and national identity in Bangladesh have been shaped historically and politically — verified facts only, 17 slides, 10–15 minute talk, with speaker notes.\n\n## Required Background\n{\n  \"deck_context\": {\n    \"source_summary\": \"Bangladesh: 169.8M people (Census 2022 final); Muslim 91.04%, Hindu 7.95%, Buddhist 0.61%, Christian 0.30%, other 0.12%. ~54 indigenous peoples, ≥35 languages (Census counts 1,650,159 across 50 groups; activist estimates ≥3M). ~1.1–1.2M Rohingya. CHT Accord 1997 unfinished. Constitutional arc: secularism 1972 → removed (Fifth Amendment) → state religion 1988 (Eighth) → restored + Article 12 (Fifteenth, 2011). 2024 uprising; 12 Feb 2026 election (BNP 209/297); Tarique Rahman PM from 17 Feb 2026; minority posture tested Oct 2026.\",\n    \"core_claim\": \"Bangladesh's national identity is a negotiated balance between the unifying forces of language and 1971 memory and the country's deep religious, ethnic, and cultural plurality — the terms of that balance are still being contested today.\",\n    \"canonical_terms\": [\n      \"Bangladesh\",\n      \"Ekushey February\",\n      \"secularism\",\n      \"indigenous peoples\",\n      \"Rohingya\",\n      \"CHT Accord\",\n      \"Census 2022\",\n      \"Mangal Shobhajatra\"\n    ]\n  },\n  \"slide_local_context\": {\n    \"required_background\": \"Full deck is 17 slides, ~12 minutes; three parts: historical roots (2–4), diversity in depth (5–14), politics today (15–16).\"\n  }\n}\n\n## Global Style\n{\n  \"name\": \"editorial_bengal (bold v1)\",\n  \"visual_direction\": \"bold editorial magazine style — oversized heavy display headlines, strong horizontal rules, confident asymmetric grids, generous ivory whitespace, punchy data badges\",\n  \"color_palette\": \"ivory canvas #F7F3E8; bottle-green #006A4E primary; vermilion #F42A41 accent; ink #141414 text; warm paper texture\",\n  \"typography\": \"very bold condensed sans display headlines (ALL CAPS or heavy title case), clean humanist sans body text, large section numerals\",\n  \"motifs\": \"thin double-rule separators, jamdani-inspired geometric line motifs in corners, small vermilion slide badges (e.g. '07 / 17'), captions in letter-spaced caps\"\n}\n\n## Input Images\n\n- Image 1: /home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png — approved sample slide style reference; match style only; do not copy layout or content\n- Image 2: /home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/lalbagh_fort_pano.jpg — strict input asset — Lalbagh Fort panorama; strict input asset; preserve the supplied image content\n\n\n## Slide\n{\n  \"number\": 1,\n  \"title\": \"Cultural Diversity and National Identity in Bangladesh\",\n  \"role\": \"cover\",\n  \"intent\": \"Open the seminar with authority and set the geographic-cultural frame\"\n}\n\n## Text\n{\n  \"title\": \"Cultural Diversity and National Identity in Bangladesh\",\n  \"key_points\": [\n    \"Cultural Diversity and National Identity in Bangladesh\",\n    \"Historical and Political Perspectives\",\n    \"Masters Seminar Presentation\"\n  ],\n  \"speaker_focus\": \"Title, framing, agenda preview\"\n}\n\n## Layout\n{\n  \"composition\": \"huge stacked title occupying upper-left two-thirds; wide photographic strip of Mughal-era architecture anchored at the bottom edge; thin vermilion rule under the subtitle\"\n}\n\n## Visual Elements\n{\n  \"main_visual\": \"wide Lalbagh Fort panorama strip along the bottom, subtly warm-graded to the ivory canvas\",\n  \"motifs\": \"jamdani geometric corner lines top-right; small bottle-green eyebrow label 'SOUTH ASIA · SEMINAR SERIES'\"\n}\n\n## Constraints\n[\n  \"Render ONLY the written text listed in key_points; never render instruction sentences or metadata\",\n  \"No watermark, no unrelated logo, no automatic extra slide number\",\n  \"Exactly one jamdani corner motif set; keep whitespace generous\"\n]\n\n## Style Reference Rule\nUse Image 1 as the approved sample-slide style reference. Match its palette, typography mood, density, texture, and overall visual identity. Do not copy its exact layout unless this slide's layout explicitly asks for it.\n\n## Input Image Handling Rules\nFor any input image marked as a strict input asset, include it visibly and preserve its content. Do not redraw, replace, relabel, or invent a similar figure. Scale and crop only as needed for composition while keeping the important labels, arrows, data, and relationships recognizable.\n\n## Universal Constraints\n- The final image itself must contain the title and key points.\n- Render Chinese text exactly and legibly; avoid garbled characters.\n- Keep the confirmed deck style consistent while varying layout by slide role.\n- No watermark, unrelated logo, or extra slide number.\n",
+  "out": "slide_01.png",
+  "input_images": [
+    {
+      "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+      "role": "approved sample slide style reference",
+      "fidelity": "match style only; do not copy layout or content"
+    },
+    {
+      "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/lalbagh_fort_pano.jpg",
+      "role": "strict input asset — Lalbagh Fort panorama",
+      "fidelity": "strict input asset; preserve the supplied image content"
+    }
+  ],
+  "requires_context_images": true,
+  "expected_backend": "built-in image tool",
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "image_gen",
+    "mode": "generate",
+    "prompt_source": "the approved sample slide job prompt",
+    "size": "16:9 landscape, 2560x1440 target",
+    "quality": "medium",
+    "approved_sample_path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+    "input_context_preparation": "view local required images before built-in generation",
+    "handoff_rule": "Sequential main-agent generation (user-approved); every slide generated with the same built-in image tool and the approved sample as style reference."
+  },
+  "generation_contract": {
+    "must_use_selected_image_backend": true,
+    "must_match_sample_generation_method": true,
+    "forbidden_final_image_methods": [
+      "local drawing/rendering scripts",
+      "Pillow-generated slides",
+      "SVG/HTML/CSS/canvas screenshots",
+      "python-pptx/PptxGenJS/native PPT layout screenshots",
+      "manually composited text/image overlays"
+    ],
+    "must_return": [
+      "backend_used",
+      "selected_source",
+      "qa_note"
+    ]
+  }
+}

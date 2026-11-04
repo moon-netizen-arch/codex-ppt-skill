@@ -1,0 +1,448 @@
+{
+  "run_status": "jobs_prepared",
+  "deck_name": "bangladesh-cultural-diversity",
+  "selected_backend": "built-in image tool",
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "image_gen",
+    "mode": "generate",
+    "prompt_source": "the approved sample slide job prompt",
+    "size": "16:9 landscape, 2560x1440 target",
+    "quality": "medium",
+    "approved_sample_path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+    "input_context_preparation": "view local required images before built-in generation",
+    "handoff_rule": "Sequential main-agent generation (user-approved); every slide generated with the same built-in image tool and the approved sample as style reference."
+  },
+  "max_concurrent_slides": 6,
+  "slides": [
+    {
+      "slide_id": "slide_01",
+      "number": 1,
+      "title": "Cultural Diversity and National Identity in Bangladesh",
+      "job": "prompts/slide_01.json",
+      "out": "origin_image/slide_01.png",
+      "input_images": [
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/lalbagh_fort_pano.jpg",
+          "role": "strict input asset — Lalbagh Fort panorama",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "pending",
+      "dispatch": null,
+      "result": null,
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_02",
+      "number": 2,
+      "title": "Language Movement and Ekushey February",
+      "job": "prompts/slide_02.json",
+      "out": "origin_image/slide_02.png",
+      "input_images": [
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/shaheed_minar_monument.jpg",
+          "role": "strict input asset — Central Shaheed Minar",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/shaheed_minar_ekushey.webp",
+          "role": "strict input asset — Shaheed Minar observance",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "pending",
+      "dispatch": null,
+      "result": null,
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_03",
+      "number": 3,
+      "title": "From Partition to Liberation, 1947–1971",
+      "job": "prompts/slide_03.json",
+      "out": "origin_image/slide_03.png",
+      "input_images": [
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/partition_1947_refugees.jpg",
+          "role": "strict input asset — 1947 Partition refugees",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/libwar_refugee_sculpture.jpg",
+          "role": "strict input asset — Liberation War memorial sculpture",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "pending",
+      "dispatch": null,
+      "result": null,
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_04",
+      "number": 4,
+      "title": "Constitution, Principles, and the Secularism Debate",
+      "job": "prompts/slide_04.json",
+      "out": "origin_image/slide_04.png",
+      "input_images": [
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/martyrs_memorial_savar.jpg",
+          "role": "strict input asset — National Martyrs' Memorial",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "pending",
+      "dispatch": null,
+      "result": null,
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_05",
+      "number": 5,
+      "title": "The Islamic Heritage of Bengal",
+      "job": "prompts/slide_05.json",
+      "out": "origin_image/slide_05.png",
+      "input_images": [
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/mosque_baitul_mukarram.jpg",
+          "role": "strict input asset — Baitul Mukarram National Mosque",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "pending",
+      "dispatch": null,
+      "result": null,
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_06",
+      "number": 6,
+      "title": "Four Threads of Identity",
+      "job": "prompts/slide_06.json",
+      "out": "origin_image/slide_06.png",
+      "input_images": [
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "pending",
+      "dispatch": null,
+      "result": null,
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_07",
+      "number": 7,
+      "title": "Who Is Indigenous? Counting and Naming the Peoples",
+      "job": "prompts/slide_07.json",
+      "out": "origin_image/slide_07.png",
+      "input_images": [
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/indigenous_family_ch.jpg",
+          "role": "strict input asset — indigenous family of the CHT",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "pending",
+      "dispatch": null,
+      "result": null,
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_08",
+      "number": 8,
+      "title": "Temples, Viharas, and Churches",
+      "job": "prompts/slide_08.json",
+      "out": "origin_image/slide_08.png",
+      "input_images": [
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/temple_dhakeshwari.webp",
+          "role": "strict input asset — Dhakeshwari Temple",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/church_holy_cross.jpg",
+          "role": "strict input asset — Holy Cross Church",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/buddhist_golden_temple.webp",
+          "role": "strict input asset — Buddha Dhatu Jadi golden temple",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "pending",
+      "dispatch": null,
+      "result": null,
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_09",
+      "number": 9,
+      "title": "Census 2022: The Religious Mosaic in Numbers",
+      "job": "prompts/slide_09.json",
+      "out": "origin_image/slide_09.png",
+      "input_images": [
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/mosque_baitul_mukarram.jpg",
+          "role": "strict input asset — mosque photo for grid",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/temple_dhakeshwari.webp",
+          "role": "strict input asset — temple photo for grid",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/church_holy_cross.jpg",
+          "role": "strict input asset — church photo for grid",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/buddhist_golden_temple.webp",
+          "role": "strict input asset — golden temple photo for grid",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "pending",
+      "dispatch": null,
+      "result": null,
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_10",
+      "number": 10,
+      "title": "Ethnic Peoples and Their Arts",
+      "job": "prompts/slide_10.json",
+      "out": "origin_image/slide_10.png",
+      "input_images": [
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/wangala_garo_festival.jpg",
+          "role": "strict input asset — Wangala festival dancers",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "pending",
+      "dispatch": null,
+      "result": null,
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_11",
+      "number": 11,
+      "title": "Chittagong Hill Tracts: Accord and After",
+      "job": "prompts/slide_11.json",
+      "out": "origin_image/slide_11.png",
+      "input_images": [
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/cht_rangamati_lake.jpg",
+          "role": "strict input asset — Kaptai Lake, Rangamati",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "pending",
+      "dispatch": null,
+      "result": null,
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_12",
+      "number": 12,
+      "title": "The Rohingya Crisis",
+      "job": "prompts/slide_12.json",
+      "out": "origin_image/slide_12.png",
+      "input_images": [
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/rohingya_camp_aerial.png",
+          "role": "strict input asset — Rohingya camps aerial view",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "pending",
+      "dispatch": null,
+      "result": null,
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_13",
+      "number": 13,
+      "title": "Urban Minorities: Biharis and the Politics of Belonging",
+      "job": "prompts/slide_13.json",
+      "out": "origin_image/slide_13.png",
+      "input_images": [
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/geneva_camp_aerial.jpg",
+          "role": "strict input asset — Geneva Camp aerial",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "pending",
+      "dispatch": null,
+      "result": null,
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_14",
+      "number": 14,
+      "title": "Festivals and Intangible Heritage",
+      "job": "prompts/slide_14.json",
+      "out": "origin_image/slide_14.png",
+      "input_images": [
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/mangal_shobhajatra.jpg",
+          "role": "strict input asset — Mangal Shobhajatra procession",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        },
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/jamdani_weaving.webp",
+          "role": "strict input asset — Jamdani weaving",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "pending",
+      "dispatch": null,
+      "result": null,
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_15",
+      "number": 15,
+      "title": "2024–2026: Upheaval, Election, and the Minority Question",
+      "job": "prompts/slide_15.json",
+      "out": "origin_image/slide_15.png",
+      "input_images": [
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "pending",
+      "dispatch": null,
+      "result": null,
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_16",
+      "number": 16,
+      "title": "Conclusion: Identity as Negotiation",
+      "job": "prompts/slide_16.json",
+      "out": "origin_image/slide_16.png",
+      "input_images": [
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "pending",
+      "dispatch": null,
+      "result": null,
+      "blocker": null
+    },
+    {
+      "slide_id": "slide_17",
+      "number": 17,
+      "title": "References and Sources",
+      "job": "prompts/slide_17.json",
+      "out": "origin_image/slide_17.png",
+      "input_images": [
+        {
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
+          "role": "approved sample slide style reference",
+          "fidelity": "match style only; do not copy layout or content"
+        }
+      ],
+      "requires_context_images": true,
+      "status": "pending",
+      "dispatch": null,
+      "result": null,
+      "blocker": null
+    }
+  ],
+  "updated_at": "2026-11-04T10:11:22Z"
+}

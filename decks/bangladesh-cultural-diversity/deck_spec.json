@@ -1,0 +1,638 @@
+{
+  "deck_name": "bangladesh-cultural-diversity",
+  "language": "English",
+  "goal": "A masters-level seminar deck on how cultural diversity and national identity in Bangladesh have been shaped historically and politically — verified facts only, 17 slides, 10–15 minute talk, with speaker notes.",
+  "deck_context": {
+    "source_summary": "Bangladesh: 169.8M people (Census 2022 final); Muslim 91.04%, Hindu 7.95%, Buddhist 0.61%, Christian 0.30%, other 0.12%. ~54 indigenous peoples, ≥35 languages (Census counts 1,650,159 across 50 groups; activist estimates ≥3M). ~1.1–1.2M Rohingya. CHT Accord 1997 unfinished. Constitutional arc: secularism 1972 → removed (Fifth Amendment) → state religion 1988 (Eighth) → restored + Article 12 (Fifteenth, 2011). 2024 uprising; 12 Feb 2026 election (BNP 209/297); Tarique Rahman PM from 17 Feb 2026; minority posture tested Oct 2026.",
+    "core_claim": "Bangladesh's national identity is a negotiated balance between the unifying forces of language and 1971 memory and the country's deep religious, ethnic, and cultural plurality — the terms of that balance are still being contested today.",
+    "canonical_terms": ["Bangladesh", "Ekushey February", "secularism", "indigenous peoples", "Rohingya", "CHT Accord", "Census 2022", "Mangal Shobhajatra"]
+  },
+  "selected_image_backend": "built-in image tool",
+  "max_concurrent_slides": 6,
+  "sample_generation_method": {
+    "backend_used": "built-in image tool",
+    "tool_name": "image_gen",
+    "mode": "generate",
+    "prompt_source": "the approved sample slide job prompt",
+    "size": "16:9 landscape, 2560x1440 target",
+    "quality": "medium",
+    "approved_sample_path": "origin_image/slide_06.png",
+    "input_context_preparation": "view local required images before built-in generation",
+    "handoff_rule": "Sequential main-agent generation (user-approved); every slide generated with the same built-in image tool and the approved sample as style reference."
+  },
+  "style": {
+    "name": "editorial_bengal (bold v1)",
+    "visual_direction": "bold editorial magazine style — oversized heavy display headlines, strong horizontal rules, confident asymmetric grids, generous ivory whitespace, punchy data badges",
+    "color_palette": "ivory canvas #F7F3E8; bottle-green #006A4E primary; vermilion #F42A41 accent; ink #141414 text; warm paper texture",
+    "typography": "very bold condensed sans display headlines (ALL CAPS or heavy title case), clean humanist sans body text, large section numerals",
+    "motifs": "thin double-rule separators, jamdani-inspired geometric line motifs in corners, small vermilion slide badges (e.g. '07 / 17'), captions in letter-spaced caps"
+  },
+  "approved_style_reference": {
+    "path": "origin_image/slide_06.png",
+    "role": "approved sample slide style reference",
+    "fidelity": "match style only; do not copy layout or content"
+  },
+  "slides": [
+    {
+      "number": 1,
+      "title": "Cultural Diversity and National Identity in Bangladesh",
+      "role": "cover",
+      "intent": "Open the seminar with authority and set the geographic-cultural frame",
+      "key_points": [
+        "Cultural Diversity and National Identity in Bangladesh",
+        "Historical and Political Perspectives",
+        "Masters Seminar Presentation"
+      ],
+      "speaker_focus": "Title, framing, agenda preview",
+      "local_context": {
+        "required_background": "Full deck is 17 slides, ~12 minutes; three parts: historical roots (2–4), diversity in depth (5–14), politics today (15–16)."
+      },
+      "layout": {
+        "composition": "huge stacked title occupying upper-left two-thirds; wide photographic strip of Mughal-era architecture anchored at the bottom edge; thin vermilion rule under the subtitle"
+      },
+      "visual_elements": {
+        "main_visual": "wide Lalbagh Fort panorama strip along the bottom, subtly warm-graded to the ivory canvas",
+        "motifs": "jamdani geometric corner lines top-right; small bottle-green eyebrow label 'SOUTH ASIA · SEMINAR SERIES'"
+      },
+      "constraints": [
+        "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
+        "No watermark, no unrelated logo, no automatic extra slide number",
+        "Exactly one jamdani corner motif set; keep whitespace generous"
+      ],
+      "required_images": [
+        {
+          "path": "assets/figures/lalbagh_fort_pano.jpg",
+          "role": "strict input asset — Lalbagh Fort panorama",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "title": "Language Movement and Ekushey February",
+      "role": "historical foundation",
+      "intent": "Show how language became the founding pillar of Bangladeshi identity",
+      "key_points": [
+        "1952 — Students sacrifice their lives demanding Bangla as the state language",
+        "1972 — Article 3: Bangla is the state language of the Republic",
+        "1999 — UNESCO declares 21 February International Mother Language Day"
+      ],
+      "speaker_focus": "1952 movement, Shaheed Minar, why language = identity",
+      "local_context": {
+        "required_background": "Ekushey February is observed on 21 February; the Central Shaheed Minar in Dhaka commemorates the martyrs; UNESCO IHD/IMLD recognition in 1999."
+      },
+      "layout": {
+        "composition": "photo left third (Shaheed Minar), three stacked milestone cards right two-thirds, each card a bold year chip plus one line"
+      },
+      "visual_elements": {
+        "main_visual": "vertical Shaheed Minar photograph with a soft paper-edge frame",
+        "motifs": "bold year chips in bottle-green; vermilion underline on headline; small badge '02 / 17'"
+      },
+      "constraints": [
+        "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
+        "Card text must fit completely inside each card — no overflow, no clipped lines",
+        "Photo captions in small letter-spaced caps; no watermark, no extra slide number"
+      ],
+      "required_images": [
+        {
+          "path": "assets/figures/shaheed_minar_monument.jpg",
+          "role": "strict input asset — Central Shaheed Minar",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        },
+        {
+          "path": "assets/figures/shaheed_minar_ekushey.webp",
+          "role": "strict input asset — Shaheed Minar observance",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "title": "From Partition to Liberation, 1947–1971",
+      "role": "historical foundation",
+      "intent": "Trace how Partition and the 1971 War forged civic nationalism",
+      "key_points": [
+        "1947 — Partition: East Bengal joins Pakistan; mass refugee flows both ways",
+        "1971 — Nine-month Liberation War; victory on 16 December",
+        "Memory of 1971 anchors a civic, language-based national identity"
+      ],
+      "speaker_focus": "Partition trauma, 1971 genocide and victory, identity through statehood",
+      "local_context": {
+        "required_background": "1947 created East/West Pakistan; the 1971 war produced Bangladesh; the Liberation War Museum and memorial sculpture culture keep refugee and victory memory public."
+      },
+      "layout": {
+        "composition": "two-photo editorial diptych top (1947 refugees left, memorial sculpture right) with a horizontal arrowed timeline band below: 1947 → 1952 → 1971"
+      },
+      "visual_elements": {
+        "main_visual": "duotone-friendly documentary photos in warm sepia-compatible frames",
+        "motifs": "arrowed green timeline rule; vermilion '1971' emphasis; badge '03 / 17'"
+      },
+      "constraints": [
+        "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
+        "Historical photos must remain recognizable and unaltered in content; captions factual",
+        "No watermark, no extra slide number"
+      ],
+      "required_images": [
+        {
+          "path": "assets/figures/partition_1947_refugees.jpg",
+          "role": "strict input asset — 1947 Partition refugees",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        },
+        {
+          "path": "assets/figures/libwar_refugee_sculpture.jpg",
+          "role": "strict input asset — Liberation War memorial sculpture",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ]
+    },
+    {
+      "number": 4,
+      "title": "Constitution, Principles, and the Secularism Debate",
+      "role": "political history",
+      "intent": "Present the constitutional journey of secularism as the spine of the identity debate",
+      "key_points": [
+        "1972 — Four principles: nationalism, socialism, democracy, secularism",
+        "Fifth Amendment (1977/1979) — secularism removed; Bismillah inserted",
+        "Eighth Amendment 1988 — Islam, the state religion · 2005 High Court: removal of secularism illegal",
+        "Fifteenth Amendment 2011 — secularism restored; Article 12 anti-communalism; Article 2A keeps Islam as state religion"
+      ],
+      "speaker_focus": "Amendment-by-amendment arc; the 2011 compromise; Article 12 as civic promise",
+      "local_context": {
+        "required_background": "Articles: 8 principles; 2A state religion; 3 Bangla; 12 anti-communalism; 41 profess religion. Sources: The Daily Star, Asian Journal of Comparative Law 69(3), Asian Survey 10.1080/07329113.2017.1341479."
+      },
+      "layout": {
+        "composition": "left: Martyrs' Memorial photo as vertical anchor; right: four-step vertical amendment timeline with bold year markers"
+      },
+      "visual_elements": {
+        "main_visual": "timeline spine in bottle-green with vermilion markers on 1988 and 2011",
+        "motifs": "article chips (Art. 8 · 2A · 12 · 41); badge '04 / 17'"
+      },
+      "constraints": [
+        "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
+        "Timeline labels must not overlap; each amendment block fully readable",
+        "No watermark, no extra slide number"
+      ],
+      "required_images": [
+        {
+          "path": "assets/figures/martyrs_memorial_savar.jpg",
+          "role": "strict input asset — National Martyrs' Memorial",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ]
+    },
+    {
+      "number": 5,
+      "title": "The Islamic Heritage of Bengal",
+      "role": "faith deep-dive",
+      "intent": "Ground the majority tradition with verified institutions and shared culture",
+      "key_points": [
+        "Muslims 91.04% of 169.8M — Census 2022",
+        "Baitul Mukarram: the national mosque, Dhaka",
+        "Sufi shrines (mazars) knit local devotion across faiths",
+        "Baul–Sufi synthesis — UNESCO Intangible Heritage, 2005"
+      ],
+      "speaker_focus": "From stat to texture: mosque life, Sufi networks, Baul as shared Bengali heritage",
+      "local_context": {
+        "required_background": "Baitul Mukarram design inspired by the Kaaba; Baul songs inscribed on UNESCO ICH in 2005; Sufi mazar culture is a cross-community practice."
+      },
+      "layout": {
+        "composition": "large mosque photograph on the right half bleeding off-edge; left half ivory with headline, one big 91.04% data numeral, and three compact note lines"
+      },
+      "visual_elements": {
+        "main_visual": "Baitul Mukarram photo with crisp paper-frame margin",
+        "motifs": "giant vermilion data numeral 91.04%; green eyebrow 'FAITH · MAJORITY TRADITION'; badge '05 / 17'"
+      },
+      "constraints": [
+        "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
+        "The 91.04% numeral must be digit-perfect; no watermark, no extra slide number"
+      ],
+      "required_images": [
+        {
+          "path": "assets/figures/mosque_baitul_mukarram.jpg",
+          "role": "strict input asset — Baitul Mukarram National Mosque",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ]
+    },
+    {
+      "number": 6,
+      "title": "Four Threads of Identity",
+      "role": "approved style sample / framework slide",
+      "intent": "Set the analytical frame of the talk with a bold editorial showcase",
+      "key_points": [
+        "LANGUAGE — Bangla state language + 50+ tongues of the peoples",
+        "FAITH — Muslim-majority public life, multi-faith institutions",
+        "PEOPLES — ~54 indigenous groups, 35+ languages, hill and plain",
+        "MEMORY — 1971 Liberation War as civic religion"
+      ],
+      "speaker_focus": "Announce the four threads that structure the rest of the talk",
+      "local_context": {
+        "required_background": "This slide doubles as the approved style sample for the whole deck."
+      },
+      "layout": {
+        "composition": "oversized headline across the top; four equal editorial cards in a row, each with a green Roman numeral, a bold thread title, and one supporting line; jamdani pattern band along the bottom"
+      },
+      "visual_elements": {
+        "main_visual": "four-card row with strong rules and confident whitespace",
+        "motifs": "jamdani geometric band bottom; vermilion card numbers; badge '06 / 17'"
+      },
+      "constraints": [
+        "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
+        "This is the deck's style benchmark: bold headline hierarchy, ivory canvas, green/vermilion accents",
+        "Card text must fit inside cards; no watermark, no extra slide number"
+      ],
+      "sample_approved": true
+    },
+    {
+      "number": 7,
+      "title": "Who Is Indigenous? Counting and Naming the Peoples",
+      "role": "minority deep-dive",
+      "intent": "Present the census data with the definitional dispute made explicit",
+      "key_points": [
+        "Census 2022 counts 1,650,159 indigenous persons across 50 groups",
+        "Largest: Chakma 483,299 · Marma 224,261 · Tripuri 156,578 · Santal 129,049 · Oraon 85,846 · Garo 76,846",
+        "CAVEAT — Definitions are contested: the government says 'ethnic minority'; the UN and most movements say 'indigenous'. Activist estimates exceed 3 million; the census count is far lower.",
+        "Counting is itself a political act"
+      ],
+      "speaker_focus": "Numbers plus the caveat box: why the gap between 1.65M and 3M+ matters",
+      "local_context": {
+        "required_background": "Indigenous Navigator and census sources; ~54 peoples recognized in advocacy; plain-based Adivasi (Santal, Oraon) and hill peoples (Chakma, Marma, Garo)."
+      },
+      "layout": {
+        "composition": "headline top; left column horizontal bar list of six largest peoples with population chips; right column family photograph; full-width vermilion-outlined caveat box beneath"
+      },
+      "visual_elements": {
+        "main_visual": "population bars in bottle-green with exact census figures",
+        "motifs": "caveat box outlined in vermilion with 'CAVEAT' tab; badge '07 / 17'"
+      },
+      "constraints": [
+        "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
+        "The caveat box must contain ONLY the CAVEAT sentence from key_points — do not render any prompt or instruction text inside the box",
+        "All population figures digit-perfect; bar labels fit; no watermark, no extra slide number"
+      ],
+      "required_images": [
+        {
+          "path": "assets/figures/indigenous_family_ch.jpg",
+          "role": "strict input asset — indigenous family of the CHT",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ]
+    },
+    {
+      "number": 8,
+      "title": "Temples, Viharas, and Churches",
+      "role": "faith deep-dive",
+      "intent": "Give minority faith institutions concrete, verified presence",
+      "key_points": [
+        "Dhakeshwari Temple — the state temple of Dhaka",
+        "Buddha Dhatu Jadi — Bandarban's golden temple",
+        "Christianity since the Portuguese era; Holy Cross educational tradition",
+        "Article 41 — freedom to profess, practice, and propagate religion"
+      ],
+      "speaker_focus": "Walk the three traditions with named institutions; Art. 41 as the constitutional guarantee",
+      "local_context": {
+        "required_background": "Dhakeshwari declared national temple by the government; Buddhist heritage in the hill tracts; Catholic/Protestant missions from the 16th/19th centuries."
+      },
+      "layout": {
+        "composition": "three-up photo gallery across the middle (temple, church, golden temple), each with a bold caption card; headline above; Article 41 quote strip below"
+      },
+      "visual_elements": {
+        "main_visual": "clean three-column photo gallery with paper frames",
+        "motifs": "quote strip in bottle-green with vermilion Art. 41 chip; badge '08 / 17'"
+      },
+      "constraints": [
+        "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
+        "Each photo caption matches its photo exactly (Temple / Church / Golden Temple); no watermark, no extra slide number"
+      ],
+      "required_images": [
+        {
+          "path": "assets/figures/temple_dhakeshwari.webp",
+          "role": "strict input asset — Dhakeshwari Temple",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        },
+        {
+          "path": "assets/figures/church_holy_cross.jpg",
+          "role": "strict input asset — Holy Cross Church",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        },
+        {
+          "path": "assets/figures/buddhist_golden_temple.webp",
+          "role": "strict input asset — Buddha Dhatu Jadi golden temple",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ]
+    },
+    {
+      "number": 9,
+      "title": "Census 2022: The Religious Mosaic in Numbers",
+      "role": "data evidence",
+      "intent": "Deliver the verified demographic core of the deck in one figure",
+      "key_points": [
+        "Muslim 91.04% · Hindu 7.95% · Buddhist 0.61% · Christian 0.30% · Other 0.12%",
+        "Total population 169.8M — Census 2022 (final)",
+        "Hindu share: 28% (1941) → 22% (1951) → 13.5% (1974) → 8.54% (2011) → 7.95% (2022)",
+        "Article 41 guarantees freedom of religion in practice"
+      ],
+      "speaker_focus": "Read the donut, then the step trend: share declining while absolute numbers grow",
+      "local_context": {
+        "required_background": "BBS Census 2022 final: 169,828,911; shares as listed. The trend line uses published census rounds."
+      },
+      "layout": {
+        "composition": "left 52%: donut chart with center total; right 48%: Hindu-share step trend on top, 2x2 photo grid with four short captions below; bottom: Article 41 strip"
+      },
+      "visual_elements": {
+        "main_visual": "donut in bottle-green with vermilion Hindu slice and grey minors; step trend as bold green steps with vermilion data points",
+        "motifs": "center reads 169.8M; photo captions Mosque / Temple / Church / Golden Temple; badge '09 / 17'"
+      },
+      "constraints": [
+        "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
+        "Donut chart labels: each of the five labels ('Muslim 91.04%', 'Hindu 7.95%', 'Buddhist 0.61%', 'Christian 0.30%', 'Other 0.12%') appears EXACTLY ONCE, placed beside its own slice — no duplicate labels, no label pointing at the wrong slice",
+        "Center label '169.8M' appears exactly once",
+        "Trend values digit-perfect; 2x2 grid photos each with their own single caption; no watermark, no extra slide number"
+      ],
+      "required_images": [
+        {
+          "path": "assets/figures/mosque_baitul_mukarram.jpg",
+          "role": "strict input asset — mosque photo for grid",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        },
+        {
+          "path": "assets/figures/temple_dhakeshwari.webp",
+          "role": "strict input asset — temple photo for grid",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        },
+        {
+          "path": "assets/figures/church_holy_cross.jpg",
+          "role": "strict input asset — church photo for grid",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        },
+        {
+          "path": "assets/figures/buddhist_golden_temple.webp",
+          "role": "strict input asset — golden temple photo for grid",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ]
+    },
+    {
+      "number": 10,
+      "title": "Ethnic Peoples and Their Arts",
+      "role": "minority deep-dive",
+      "intent": "Show the living cultures of the indigenous peoples beyond statistics",
+      "key_points": [
+        "~54 peoples · 35+ languages",
+        "Chakma · Marma · Tripuri · Santal · Oraon · Garo · Rakhaine · Tanchangya",
+        "Wangala — the Garo harvest festival of thanks",
+        "Weaving, drum, and dance traditions carried across generations"
+      ],
+      "speaker_focus": "Wangala as entry point; hill vs plain peoples; arts as identity carriers",
+      "local_context": {
+        "required_background": "Census 2022 group list; Garo predominantly Christian in Bangladesh; Santal/Oraon live on the plains; Chakma/Marma in the CHT."
+      },
+      "layout": {
+        "composition": "wide Wangala dancers photo across the top half; below: bold people-name chips row and two short support columns"
+      },
+      "visual_elements": {
+        "main_visual": "vibrant festival photograph framed by ivory margins",
+        "motifs": "green people chips; vermilion motif dots; badge '10 / 17'"
+      },
+      "constraints": [
+        "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
+        "People names spelled exactly as listed; no watermark, no extra slide number"
+      ],
+      "required_images": [
+        {
+          "path": "assets/figures/wangala_garo_festival.jpg",
+          "role": "strict input asset — Wangala festival dancers",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ]
+    },
+    {
+      "number": 11,
+      "title": "Chittagong Hill Tracts: Accord and After",
+      "role": "political conflict",
+      "intent": "Explain the CHT peace process and its unfinished business",
+      "key_points": [
+        "Accord signed 2 December 1997 after two decades of conflict",
+        "Institutions: Ministry of CHT Affairs · CHT Regional Council · 3 Hill District Councils · Land Commission",
+        "27 years on: no Regional or District Council elections",
+        "Conflict toll ~8,140 killed, injured, or missing (Dey 2024); Kroc peace-score 49/100 in the first decade"
+      ],
+      "speaker_focus": "What the Accord won; what remains — land, representation, recognition (ethnic minority vs indigenous)",
+      "local_context": {
+        "required_background": "PCHTR Treaty 1997; Jana Janadhipaditya Parishad and upazila-level councils still contested; UPR Nov 2023 asked for a timeline-bound roadmap."
+      },
+      "layout": {
+        "composition": "Rangamati lake photograph as a calm left panel; right: accord-institutions checklist with bold green checks, then a vermilion 'UNFINISHED' stat block"
+      },
+      "visual_elements": {
+        "main_visual": "scenic CHT lake photo in tall frame",
+        "motifs": "check chips in green; vermilion stat block; badge '11 / 17'"
+      },
+      "constraints": [
+        "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
+        "Institution names fit their line without overflow; figures digit-perfect; no watermark, no extra slide number"
+      ],
+      "required_images": [
+        {
+          "path": "assets/figures/cht_rangamati_lake.jpg",
+          "role": "strict input asset — Kaptai Lake, Rangamati",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ]
+    },
+    {
+      "number": 12,
+      "title": "The Rohingya Crisis",
+      "role": "regional crisis",
+      "intent": "Present Bangladesh's largest contemporary refugee reality with verified figures",
+      "key_points": [
+        "1.1–1.2M Rohingya hosted in Bangladesh",
+        "33 camps in Cox's Bazar + Bhasan Char",
+        "~700,000 fled Myanmar after 27 August 2017; ~150,000 new arrivals since early 2024",
+        "UNHCR 2026 appeal: $710.5M — 26% below the previous year"
+      ],
+      "speaker_focus": "Scale, timeline, sea routes, funding squeeze, repatriation stalled",
+      "local_context": {
+        "required_background": "UNHCR 2025–26: >36,000 to Bhasan Char by Jan 2025; 2025 deadliest sea year (~900 dead/missing); UNGA High-Level Conference on Myanmar 30 Sep 2025; 34th camp area."
+      },
+      "layout": {
+        "composition": "aerial camp photograph dominating the right 60%; left: stacked data tiles (1.1–1.2M · 33 camps · 2017 · $710.5M) with a timeline ribbon along the bottom"
+      },
+      "visual_elements": {
+        "main_visual": "camp aerial with paper-edge frame",
+        "motifs": "data tiles as bold ivory cards with green numerals; vermilion year chips; badge '12 / 17'"
+      },
+      "constraints": [
+        "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
+        "All figures digit-perfect; no watermark, no extra slide number"
+      ],
+      "required_images": [
+        {
+          "path": "assets/figures/rohingya_camp_aerial.png",
+          "role": "strict input asset — Rohingya camps aerial view",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ]
+    },
+    {
+      "number": 13,
+      "title": "Urban Minorities: Biharis and the Politics of Belonging",
+      "role": "minority deep-dive",
+      "intent": "Tell the often-forgotten story of the Urdu-speaking urban minority",
+      "key_points": [
+        "~300,000–400,000 Urdu-speaking Bangladeshis across 116 camps since 1971",
+        "Geneva Camp, Mohammadpur — the largest (~21,700 residents)",
+        "Stateless until the 2008 Supreme Court ruling: 'Urdu-speaking Bangladeshis'",
+        "Citizenship won; urban exclusion persists"
+      ],
+      "speaker_focus": "Stranded after 1971, Bihari camp life, 2008 court decision, belonging in the city",
+      "local_context": {
+        "required_background": "Post-1971 repatriation failed for Urdu-speakers; ICJ and Bangladeshi court cases; Geneva Camp density among the world's highest; name: 'Bihari' often rejected by residents."
+      },
+      "layout": {
+        "composition": "aerial photo left 45% with caption; right: four numbered narrative steps in bold editorial blocks, final step highlighted in vermilion"
+      },
+      "visual_elements": {
+        "main_visual": "camp aerial documentary frame",
+        "motifs": "numbered steps I–IV in green; vermilion final-step rule; badge '13 / 17'"
+      },
+      "constraints": [
+        "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
+        "Percent/range figures exact; no watermark, no extra slide number"
+      ],
+      "required_images": [
+        {
+          "path": "assets/figures/geneva_camp_aerial.jpg",
+          "role": "strict input asset — Geneva Camp aerial",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ]
+    },
+    {
+      "number": 14,
+      "title": "Festivals and Intangible Heritage",
+      "role": "culture celebration",
+      "intent": "Show shared national festivals where diversity performs in public",
+      "key_points": [
+        "Mangal Shobhajatra — UNESCO ICH 2016, born 1989: the New Year's carnival",
+        "Baul songs UNESCO 2005 · Jamdani weaving UNESCO 2008",
+        "Pahela Baishakh · Durga Puja (national holiday) · Eid cycle · Wangala",
+        "Festivals are civic spaces where pluralism becomes national"
+      ],
+      "speaker_focus": "From UNESCO lists to street practice; Durga Puja security figures as state recognition",
+      "local_context": {
+        "required_background": "UNESCO refs: Mangal Shobhajatra 01091 (inscribed 2016); Baul 2005; Jamdani 2008. Durga Puja celebrated nationwide; ~33,000 venues got police security in Oct 2026."
+      },
+      "layout": {
+        "composition": "Mangal Shobhajatra procession photo as a wide banner across the top; Jamdani loom photo smaller bottom-left; right: festival calendar chips and UNESCO inscription list"
+      },
+      "visual_elements": {
+        "main_visual": "colorful procession banner + craft photo pair",
+        "motifs": "UNESCO year chips in green; vermilion 'NATIONAL HOLIDAY' tag on Durga Puja; badge '14 / 17'"
+      },
+      "constraints": [
+        "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
+        "UNESCO years exact (2016/2005/2008); no watermark, no extra slide number"
+      ],
+      "required_images": [
+        {
+          "path": "assets/figures/mangal_shobhajatra.jpg",
+          "role": "strict input asset — Mangal Shobhajatra procession",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        },
+        {
+          "path": "assets/figures/jamdani_weaving.webp",
+          "role": "strict input asset — Jamdani weaving",
+          "fidelity": "strict input asset; preserve the supplied image content"
+        }
+      ]
+    },
+    {
+      "number": 15,
+      "title": "2024–2026: Upheaval, Election, and the Minority Question",
+      "role": "contemporary politics",
+      "intent": "Bring the identity debate to the present: the 2024 uprising and the February 2026 election",
+      "key_points": [
+        "Aug 2024 — uprising topples the government; Yunus-led interim takes office",
+        "12 Feb 2026 — general election: BNP 209/297 seats (49.97%) · Jamaat 68 (31.76%) · turnout 59.44%",
+        "17 Feb 2026 — Tarique Rahman sworn in as Prime Minister",
+        "Oct 2026 — government pledges minority rights 'on citizenship, not religion'; police security at ~33,000 Durga Puja venues",
+        "Data: ASK recorded 138 violent incidents against religious minorities, Jan–Nov 2024 (mostly 5–8 Aug); rival counts contested"
+      ],
+      "speaker_focus": "Cautious optimism framing: institutions reconstituted, minority security a live test",
+      "local_context": {
+        "required_background": "Awami League barred from the 2026 poll; July Charter referendum 68.26% Yes; contestation: India MEA cited 2,200 incidents, Oikya Parishad 2,010, Dhaka called figures 'highly exaggerated'."
+      },
+      "layout": {
+        "composition": "bold horizontal timeline across the middle (Aug 2024 → 12 Feb 2026 → 17 Feb 2026 → Oct 2026) with event cards; data chip row beneath; headline in two stacked lines"
+      },
+      "visual_elements": {
+        "main_visual": "timeline as the hero graphic — heavy green spine, vermilion milestone dots",
+        "motifs": "data chip outlined in vermilion; badge '15 / 17'; no photography on this slide"
+      },
+      "constraints": [
+        "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
+        "Election numbers digit-perfect (209/297, 49.97%, 31.76%, 59.44%); timeline labels never overlap; no watermark, no extra slide number"
+      ]
+    },
+    {
+      "number": 16,
+      "title": "Conclusion: Identity as Negotiation",
+      "role": "conclusion",
+      "intent": "Synthesize the argument and leave the audience with four takeaways",
+      "key_points": [
+        "UNITY — language and the memory of 1971 hold the nation together",
+        "PLURALISM — faiths, peoples, and languages make the nation plural",
+        "CONSTITUTION — secularism removed and restored: Art. 12 as promise",
+        "BAROMETER — how minorities fare tells us how democracy fares"
+      ],
+      "speaker_focus": "Restate the core claim; invite the question: whose terms define the nation?",
+      "local_context": {
+        "required_background": "Ties back to the four threads of Slide 6 and the data of Slides 7–9 and 15."
+      },
+      "layout": {
+        "composition": "oversized closing statement top; four takeaway rows with bold lead words; thin jamdani rule and contact/course line at the very bottom"
+      },
+      "visual_elements": {
+        "main_visual": "typographic finale — strong hierarchy, maximum whitespace",
+        "motifs": "lead words in vermilion; body in ink on ivory; badge '16 / 17'"
+      },
+      "constraints": [
+        "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
+        "Deliberately image-free: composition must be purely typographic with jamdani rule accents",
+        "No watermark, no extra slide number"
+      ]
+    },
+    {
+      "number": 17,
+      "title": "References and Sources",
+      "role": "references",
+      "intent": "Show the verified evidence base for an academic audience",
+      "key_points": [
+        "Demography — Bangladesh Bureau of Statistics, Population Census 2022 (final)",
+        "Rohingya — UNHCR emergency updates & 2026 appeal; UNGA High-Level Conference on Myanmar (30 Sep 2025)",
+        "Heritage — UNESCO ICH: Mangal Shobhajatra (01091), Baul songs, Jamdani",
+        "Law & politics — The Daily Star; AJCL 69(3); Asian Survey (2017); ASK reports 2024–25; Feb 2026 gazette results",
+        "CHT — UNPO; ANU; Indigenous Navigator; Dey (2024); Kroc Institute",
+        "Photos — Wikimedia Commons; per-figure sources: assets/figures/SOURCES.md"
+      ],
+      "speaker_focus": "Offer to share the source list; note photo licensing",
+      "local_context": {
+        "required_background": "All claims in the deck trace to these sources; sources.md records image licenses."
+      },
+      "layout": {
+        "composition": "two-column reference list under a bold headline; small ivory cards; course/date footer"
+      },
+      "visual_elements": {
+        "main_visual": "clean editorial bibliography layout",
+        "motifs": "green source-category labels; vermilion rule under headline; badge '17 / 17'"
+      },
+      "constraints": [
+        "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
+        "Reference lines must not overflow their columns — shorten wrapping gracefully, never clip",
+        "No watermark, no extra slide number"
+      ]
+    }
+  ]
+}
