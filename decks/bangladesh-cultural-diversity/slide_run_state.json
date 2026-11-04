@@ -1,5 +1,5 @@
 {
-  "status": "slides_dispatched",
+  "status": "slides_recorded",
   "history": [
     {
       "from": "created",
@@ -12,7 +12,13 @@
       "to": "slides_dispatched",
       "at": "2026-11-04T10:19:00Z",
       "note": "all slide jobs dispatched"
+    },
+    {
+      "from": "slides_dispatched",
+      "to": "slides_recorded",
+      "at": "2026-11-04T10:35:27Z",
+      "note": "all slide images recorded"
     }
   ],
-  "updated_at": "2026-11-04T10:19:00Z"
+  "updated_at": "2026-11-04T10:35:27Z"
 }
