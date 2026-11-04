@@ -5,7 +5,16 @@
   "deck_context": {
     "source_summary": "Bangladesh: 169.8M people (Census 2022 final); Muslim 91.04%, Hindu 7.95%, Buddhist 0.61%, Christian 0.30%, other 0.12%. ~54 indigenous peoples, ≥35 languages (Census counts 1,650,159 across 50 groups; activist estimates ≥3M). ~1.1–1.2M Rohingya. CHT Accord 1997 unfinished. Constitutional arc: secularism 1972 → removed (Fifth Amendment) → state religion 1988 (Eighth) → restored + Article 12 (Fifteenth, 2011). 2024 uprising; 12 Feb 2026 election (BNP 209/297); Tarique Rahman PM from 17 Feb 2026; minority posture tested Oct 2026.",
     "core_claim": "Bangladesh's national identity is a negotiated balance between the unifying forces of language and 1971 memory and the country's deep religious, ethnic, and cultural plurality — the terms of that balance are still being contested today.",
-    "canonical_terms": ["Bangladesh", "Ekushey February", "secularism", "indigenous peoples", "Rohingya", "CHT Accord", "Census 2022", "Mangal Shobhajatra"]
+    "canonical_terms": [
+      "Bangladesh",
+      "Ekushey February",
+      "secularism",
+      "indigenous peoples",
+      "Rohingya",
+      "CHT Accord",
+      "Census 2022",
+      "Mangal Shobhajatra"
+    ]
   },
   "selected_image_backend": "built-in image tool",
   "max_concurrent_slides": 6,
@@ -96,7 +105,7 @@
       "required_images": [
         {
           "path": "assets/figures/shaheed_minar_monument.jpg",
-          "role": "strict input asset — Central Shaheed Minar",
+          "role": "strict input asset — Shaheed Minar monument",
           "fidelity": "strict input asset; preserve the supplied image content"
         },
         {
@@ -140,7 +149,7 @@
         },
         {
           "path": "assets/figures/libwar_refugee_sculpture.jpg",
-          "role": "strict input asset — Liberation War memorial sculpture",
+          "role": "strict input asset — Liberation War memorial (martyred teachers monument)",
           "fidelity": "strict input asset; preserve the supplied image content"
         }
       ]
@@ -209,7 +218,7 @@
       "required_images": [
         {
           "path": "assets/figures/mosque_baitul_mukarram.jpg",
-          "role": "strict input asset — Baitul Mukarram National Mosque",
+          "role": "strict input asset — Baitul Mukarram prayer hall",
           "fidelity": "strict input asset; preserve the supplied image content"
         }
       ]
@@ -273,7 +282,7 @@
       "required_images": [
         {
           "path": "assets/figures/indigenous_family_ch.jpg",
-          "role": "strict input asset — indigenous family of the CHT",
+          "role": "strict input asset — Chakma girls in traditional dress",
           "fidelity": "strict input asset; preserve the supplied image content"
         }
       ]
@@ -469,7 +478,7 @@
       ],
       "required_images": [
         {
-          "path": "assets/figures/rohingya_camp_aerial.png",
+          "path": "assets/figures/rohingya_camp_aerial.jpg",
           "role": "strict input asset — Rohingya camps aerial view",
           "fidelity": "strict input asset; preserve the supplied image content"
         }
@@ -491,22 +500,17 @@
         "required_background": "Post-1971 repatriation failed for Urdu-speakers; ICJ and Bangladeshi court cases; Geneva Camp density among the world's highest; name: 'Bihari' often rejected by residents."
       },
       "layout": {
-        "composition": "aerial photo left 45% with caption; right: four numbered narrative steps in bold editorial blocks, final step highlighted in vermilion"
+        "composition": "purely typographic: four numbered narrative blocks in a 2x2 grid, oversized stat numerals (~300–400k · 116 camps · 1971 · 2008) anchoring each block; a full-width vermilion band with 'BELONGING, EARNED LATE' across the bottom"
       },
       "visual_elements": {
-        "main_visual": "camp aerial documentary frame",
-        "motifs": "numbered steps I–IV in green; vermilion final-step rule; badge '13 / 17'"
+        "main_visual": "stat-driven editorial composition, no photography",
+        "motifs": "green step numbers I-IV; vermilion bottom band; badge '13 / 17'"
       },
       "constraints": [
         "Render ONLY the written text listed in key_points; never render instruction sentences or metadata",
-        "Percent/range figures exact; no watermark, no extra slide number"
-      ],
-      "required_images": [
-        {
-          "path": "assets/figures/geneva_camp_aerial.jpg",
-          "role": "strict input asset — Geneva Camp aerial",
-          "fidelity": "strict input asset; preserve the supplied image content"
-        }
+        "Percent/range figures exact; no watermark, no extra slide number",
+        "Deliberately image-free: no photographs on this slide; composition must be purely typographic",
+        "Range figures exact: 300,000–400,000 and 116 camps"
       ]
     },
     {

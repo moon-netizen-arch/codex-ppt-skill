@@ -53,7 +53,7 @@
         },
         {
           "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/shaheed_minar_monument.jpg",
-          "role": "strict input asset — Central Shaheed Minar",
+          "role": "strict input asset — Shaheed Minar monument",
           "fidelity": "strict input asset; preserve the supplied image content"
         },
         {
@@ -87,7 +87,7 @@
         },
         {
           "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/libwar_refugee_sculpture.jpg",
-          "role": "strict input asset — Liberation War memorial sculpture",
+          "role": "strict input asset — Liberation War memorial (martyred teachers monument)",
           "fidelity": "strict input asset; preserve the supplied image content"
         }
       ],
@@ -135,7 +135,7 @@
         },
         {
           "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/mosque_baitul_mukarram.jpg",
-          "role": "strict input asset — Baitul Mukarram National Mosque",
+          "role": "strict input asset — Baitul Mukarram prayer hall",
           "fidelity": "strict input asset; preserve the supplied image content"
         }
       ],
@@ -178,7 +178,7 @@
         },
         {
           "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/indigenous_family_ch.jpg",
-          "role": "strict input asset — indigenous family of the CHT",
+          "role": "strict input asset — Chakma girls in traditional dress",
           "fidelity": "strict input asset; preserve the supplied image content"
         }
       ],
@@ -322,7 +322,7 @@
           "fidelity": "match style only; do not copy layout or content"
         },
         {
-          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/rohingya_camp_aerial.png",
+          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/rohingya_camp_aerial.jpg",
           "role": "strict input asset — Rohingya camps aerial view",
           "fidelity": "strict input asset; preserve the supplied image content"
         }
@@ -344,11 +344,6 @@
           "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/origin_image/slide_06.png",
           "role": "approved sample slide style reference",
           "fidelity": "match style only; do not copy layout or content"
-        },
-        {
-          "path": "/home/user/codex-ppt-skill/decks/bangladesh-cultural-diversity/assets/figures/geneva_camp_aerial.jpg",
-          "role": "strict input asset — Geneva Camp aerial",
-          "fidelity": "strict input asset; preserve the supplied image content"
         }
       ],
       "requires_context_images": true,
@@ -444,5 +439,5 @@
       "blocker": null
     }
   ],
-  "updated_at": "2026-11-04T10:11:22Z"
+  "updated_at": "2026-11-04T10:17:59Z"
 }
